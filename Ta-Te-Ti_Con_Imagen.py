@@ -42,8 +42,7 @@ class Tateti:
         self.tabla_botones[col][fila].config(text=texto, image=imagen, height=63, width=65)
         self.chequearGanador(self.tabla_botones)
         self.x = not self.x
-
-
+    
     #Verifica el ganador
     def chequearGanador(self, tabla_botones):
         if self.tabla_botones[0][0].cget("text") and self.tabla_botones[0][0].cget("text") == self.tabla_botones[0][1].cget("text") and self.tabla_botones[0][1].cget("text") == self.tabla_botones[0][2].cget("text"):
@@ -62,6 +61,5 @@ class Tateti:
             print("gano " + self.turno)
         if self.tabla_botones[0][2].cget("text") and self.tabla_botones[0][2].cget("text") == self.tabla_botones[1][1].cget("text") and self.tabla_botones[1][1].cget("text") == self.tabla_botones[2][0].cget("text"):
             print("gano " + self.turno)
-
-
+                        
 ttt = Tateti()
